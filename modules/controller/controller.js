@@ -1089,13 +1089,6 @@ class KDXApp extends FlowApp{
 		}
 		this.restartDaemons(false, beforeStartCB);
 	}
-	isMinerWaitingForWalletLogin(){
-		if(this.miningAddress){
-			return false
-		}
-
-		return (this.useWalletForMining && this.wallet);
-	}
 	async getMiningAddress(){
 		if(this.miningAddress){
 			console.log("getMiningAddress: returning", this.miningAddress)
